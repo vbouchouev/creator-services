@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Build Studio | Pricing concept B</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Productized builds for creators and solopreneurs. A website, a campaign, or a course: built in days, priced flat, you own everything.">
+<meta property="og:title" content="A website, a campaign, or a course. Built in days. Priced flat.">
+<meta property="og:description" content="Productized builds for creators and solopreneurs. No retainers, no hourly meters, no scope creep.">
+<meta property="og:image" content="https://creator-build-studio.netlify.app/assets/og.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;900&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f1ea; --panel:#ffffff; --ink:#171512; --soft:#5f594e;
+    --line:#dcd6c8; --green:#1d4e33; --green-soft:#e4ede6; --pop:#e8fb5a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:"Schibsted Grotesk",system-ui,sans-serif;
+    font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:"Spline Sans Mono",monospace}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+
+  nav{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:22px 0;
+  }
+  .wordmark{font-weight:900;font-size:18px;letter-spacing:-.02em}
+  .wordmark span{color:var(--green)}
+  nav .mono{font-size:12.5px;color:var(--soft)}
+
+  header{padding:64px 0 56px}
+  h1{
+    font-weight:900;letter-spacing:-.035em;line-height:.98;
+    font-size:clamp(40px,7.2vw,88px);max-width:14ch;
+  }
+  h1 em{
+    font-style:normal;color:var(--green);
+    background:linear-gradient(transparent 62%, var(--pop) 62%);
+  }
+  .lede{margin-top:26px;max-width:52ch;font-size:18px;color:var(--soft)}
+  .lede b{color:var(--ink)}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;align-items:center}
+  .btn{
+    display:inline-block;background:var(--ink);color:#fff;text-decoration:none;
+    font-weight:700;font-size:15.5px;padding:15px 26px;border-radius:999px;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn:hover{background:var(--green);transform:translateY(-1px)}
+  .btn:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+  .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+  .btn.ghost:hover{background:var(--ink);color:#fff}
+  .tick-row{
+    display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:30px;
+    font-size:13px;color:var(--soft);
+  }
+  .tick-row span::before{content:"\2713  ";color:var(--green);font-weight:700}
+
+  .band{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    background:var(--panel);padding:18px 0;
+  }
+  .band .wrap{display:flex;flex-wrap:wrap;gap:8px 34px;font-size:13.5px;color:var(--soft)}
+  .band b{color:var(--ink)}
+
+  section{padding:72px 0 12px}
+  .eyebrow{
+    font-family:"Spline Sans Mono",monospace;font-size:12.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--green);margin-bottom:14px;
+  }
+  h2{font-weight:900;letter-spacing:-.025em;font-size:clamp(28px,3.6vw,42px);max-width:24ch}
+  .sub{margin-top:12px;color:var(--soft);max-width:58ch}
+
+  .offers{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px;margin-top:38px}
+  .offer{
+    background:var(--panel);border:1px solid var(--line);border-radius:20px;
+    padding:30px 26px 26px;display:flex;flex-direction:column;
+  }
+  .offer.feature{border:2px solid var(--ink)}
+  .offer .tag{
+    align-self:flex-start;font-family:"Spline Sans Mono",monospace;font-size:12px;
+    letter-spacing:.12em;text-transform:uppercase;background:var(--green-soft);
+    color:var(--green);padding:5px 10px;border-radius:6px;margin-bottom:16px;
+  }
+  .offer h3{font-size:23px;font-weight:700;letter-spacing:-.02em}
+  .price{
+    margin:14px 0 4px;font-weight:900;font-size:38px;letter-spacing:-.03em;
+  }
+  .price small{font-size:14px;font-weight:500;color:var(--soft);letter-spacing:0}
+  .turn{font-family:"Spline Sans Mono",monospace;font-size:12.5px;color:var(--soft);margin-bottom:16px}
+  .offer ul{list-style:none;margin:6px 0 22px;flex:1}
+  .offer li{
+    padding:8px 0 8px 26px;position:relative;font-size:14.5px;color:var(--soft);
+    border-bottom:1px dashed var(--line);
+  }
+  .offer li:last-child{border-bottom:0}
+  .offer li::before{content:"\2192";position:absolute;left:0;color:var(--green);font-weight:700}
+  .offer li b{color:var(--ink);font-weight:600}
+  .offer .btn{text-align:center}
+  .addon{
+    margin-top:14px;background:var(--green-soft);border-radius:12px;padding:13px 16px;
+    font-size:13.5px;color:var(--green);
+  }
+  .addon b{font-weight:700}
+
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:38px}
+  .step{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:26px}
+  .step .n{
+    font-family:"Spline Sans Mono",monospace;font-weight:500;font-size:13px;
+    color:var(--green);margin-bottom:12px;display:block;
+  }
+  .step h3{font-size:18px;font-weight:700;margin-bottom:8px}
+  .step p{font-size:14.5px;color:var(--soft)}
+
+  .faq{margin-top:36px;max-width:760px}
+  details{
+    background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:18px 22px;margin-bottom:10px;
+  }
+  summary{font-weight:700;font-size:15.5px;cursor:pointer}
+  summary:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+  details p{margin-top:10px;font-size:14.5px;color:var(--soft)}
+
+  .cta-final{
+    margin:80px 0 0;background:var(--ink);border-radius:26px;color:#fff;
+    padding:56px 40px;text-align:center;
+  }
+  .cta-final h2{color:#fff;margin:0 auto}
+  .cta-final p{color:#c9c2b4;margin:14px auto 30px;max-width:46ch}
+  .cta-final .btn{background:var(--pop);color:var(--ink)}
+  .cta-final .btn:hover{background:#fff}
+  .cta-final .mono{display:block;margin-top:18px;font-size:12.5px;color:#9d968a}
+
+  footer{
+    padding:44px 0 54px;font-size:13px;color:var(--soft);
+    display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;
+  }
+  @media (max-width:520px){
+    header{padding:44px 0 40px}
+    section{padding:56px 0 8px}
+    .cta-final{padding:44px 22px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Top">
+    <div class="wordmark">the build studio<span>.</span></div>
+    <div class="mono">for creators + solopreneurs</div>
+  </nav>
+
+  <header>
+    <h1>A website, a campaign, or a course. <em>Built in days.</em> Priced flat.</h1>
+    <p class="lede">Productized builds for creators and solopreneurs. <b>No agency retainers, no hourly meters, no scope creep.</b> You see the price, you pick the package, you get the thing. Everything we make is yours: the code, the files, the accounts.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#offers">See the packages</a>
+      <a class="btn ghost" href="mailto:vbouchouev@gmail.com?subject=Creator%20build%20inquiry">Start a build</a>
+    </div>
+    <div class="tick-row">
+      <span>Builds start at $500</span>
+      <span>Fixed scope, fixed price</span>
+      <span>You own everything</span>
+      <span>Senior product taste, AI-native speed</span>
+    </div>
+  </header>
+</div>
+
+<div class="band">
+  <div class="wrap">
+    <span><b>Recent:</b> full site rescue and rebuild, live in a weekend</span>
+    <span><b>In progress:</b> a ten-design study for a working artist</span>
+    <span><b>Team:</b> a product builder + a veteran creator-partnerships operator</span>
+  </div>
+</div>
+
+<div class="wrap">
+  <section id="offers">
+    <div class="eyebrow">The packages</div>
+    <h2>Three things we build. Nothing vague.</h2>
+    <p class="sub">Every package is a fixed deliverable at a fixed price on a fixed timeline. If you need something that isn't on this page, we are probably not your studio, and we will tell you so for free.</p>
+
+    <div class="offers">
+      <article class="offer feature">
+        <span class="tag">01 &middot; Websites</span>
+        <h3>Your site, done right</h3>
+        <div class="price">$500 <small>Launch</small> &middot; $1,500 <small>Signature</small></div>
+        <div class="turn">Launch: live in 1 week &middot; Signature: live in 2</div>
+        <ul>
+          <li><b>Launch:</b> a one-page site, mobile-perfect, with up to <b>10 style directions</b> to choose from</li>
+          <li><b>Signature:</b> multi-section site with shop and newsletter integration, custom share cards for every page</li>
+          <li>One revision round (Launch) or two (Signature)</li>
+          <li>Your domain, your hosting, your accounts. <b>You own it all</b></li>
+        </ul>
+        <a class="btn" href="mailto:vbouchouev@gmail.com?subject=Website%20build%20inquiry">Build my site</a>
+        <div class="addon"><b>Keep It Fresh, $50/mo:</b> ongoing edits on request. Send a text, wake up to the change.</div>
+      </article>
+
+      <article class="offer">
+        <span class="tag">02 &middot; Campaigns</span>
+        <h3>Scroll-stopping creative</h3>
+        <div class="price">$500 <small>Creative Sprint</small></div>
+        <div class="turn">3 hours of production for the price of 2 &middot; 48-hour turnaround</div>
+        <ul>
+          <li><b>Creative Sprint:</b> 3 hours at the $250/hr studio rate, you pay for 2. Typically <b>4 to 6 finished, ad-ready concepts</b></li>
+          <li>One direction-setting call, production starts same day</li>
+          <li><b>Campaign Pack, $900:</b> the step up. 12 finished assets (8 statics + 4 motion), sized for every placement</li>
+          <li>Ongoing production for sprint and pack alumni: <b>$250/hr in prepaid 4-hour blocks</b></li>
+        </ul>
+        <a class="btn" href="mailto:vbouchouev@gmail.com?subject=Creative%20Sprint%20inquiry">Book a sprint</a>
+        <div class="addon"><b>Start small, scale what converts:</b> brands that see results typically invest $2,000 to $5,000 over a few months.</div>
+      </article>
+
+      <article class="offer">
+        <span class="tag">03 &middot; Courses</span>
+        <h3>Your course, constructed</h3>
+        <div class="price">$2,500 <small>flat</small></div>
+        <div class="turn">Ready to sell in 3 weeks</div>
+        <ul>
+          <li>Curriculum structured <b>from your existing content</b>: no blank page</li>
+          <li>Course landing page + checkout, wired and tested</li>
+          <li>Module one fully produced with you as the template for the rest</li>
+          <li>Launch email sequence drafted for your list</li>
+        </ul>
+        <a class="btn" href="mailto:vbouchouev@gmail.com?subject=Course%20build%20inquiry">Build my course</a>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">How it works</div>
+    <h2>Pick, talk, receive.</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="n">STEP 01</span>
+        <h3>Pick a package</h3>
+        <p>The price and the deliverables are right here on the page. No proposal decks, no discovery phases.</p>
+      </div>
+      <div class="step">
+        <span class="n">STEP 02</span>
+        <h3>One 30-minute call</h3>
+        <p>We take your links, your files, and your taste. That is all we need to start building the same day.</p>
+      </div>
+      <div class="step">
+        <span class="n">STEP 03</span>
+        <h3>Delivered in days</h3>
+        <p>Sites in 1 to 2 weeks, campaign packs in 1, courses in 3. You review, we polish, it ships.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Fair questions</div>
+    <h2>The fine print, in plain English.</h2>
+    <div class="faq">
+      <details>
+        <summary>Can I start small?</summary>
+        <p>Yes, that is the design. Campaigns start with a $500 Creative Sprint. Sites start with the $500 Launch, and if you upgrade within 60 days your $500 counts toward Signature. Try the studio once, then scale what works.</p>
+      </details>
+      <details>
+        <summary>Who owns what you make?</summary>
+        <p>You do. Code, design files, copy, accounts, domain. If we part ways the day after delivery, everything keeps working and everything is yours.</p>
+      </details>
+      <details>
+        <summary>How is this so much faster than an agency?</summary>
+        <p>We build AI-native: generation, iteration, and testing at machine speed, with a senior product eye on every output. You get agency-quality work on a freelancer timeline, at a flat price.</p>
+      </details>
+      <details>
+        <summary>What if I need changes later?</summary>
+        <p>Small edits are what Keep It Fresh is for: $50 a month, edits on request. Bigger evolutions are just a new package.</p>
+      </details>
+      <details>
+        <summary>What do you not do?</summary>
+        <p>Ongoing social account management, paid media buying, and open-ended "anything" retainers. Fixed things, built well, is the whole idea.</p>
+      </details>
+    </div>
+  </section>
+
+  <div class="cta-final">
+    <h2>Tell us what you need built.</h2>
+    <p>One email. Include your links and which package caught your eye. You will hear back within a day.</p>
+    <a class="btn" href="mailto:vbouchouev@gmail.com?subject=Creator%20build%20inquiry">Start a build</a>
+    <span class="mono">Booking a limited number of builds per month.</span>
+  </div>
+
+  <footer>
+    <span>the build studio &middot; 2026</span>
+    <span>Made for creators and solopreneurs</span>
+  </footer>
+</div>
+</body>
+</html>
