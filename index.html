@@ -111,6 +111,26 @@
   }
   .addon b{font-weight:700}
 
+  /* Tier ladder inside an offer card, for when one service has steps. */
+  .tiers{margin:14px 0 20px;flex:1}
+  .tier{padding:13px 0;border-bottom:1px dashed var(--line)}
+  .tier:last-child{border-bottom:0}
+  .tier-top{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+  .tier-name{font-weight:700;font-size:16.5px}
+  .tier-price{font-weight:900;font-size:21px;letter-spacing:-.025em}
+  .tier-turn{
+    font-family:"Spline Sans Mono",monospace;font-size:12px;color:var(--soft);
+    margin-left:auto;white-space:nowrap;
+  }
+  .tier p{font-size:14px;color:var(--soft);margin-top:5px}
+  .tier p b{color:var(--ink);font-weight:600}
+
+  .aside{
+    margin-top:26px;text-align:center;font-size:14.5px;color:var(--soft);
+    max-width:60ch;margin-inline:auto;
+  }
+  .aside b{color:var(--ink);font-weight:600}
+
   .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:38px}
   .step{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:26px}
   .step .n{
@@ -194,16 +214,36 @@
       <article class="offer feature">
         <span class="tag">01 &middot; Websites</span>
         <h3>Your site, done right</h3>
-        <div class="price">$500 <small>Launch</small> &middot; $1,500 <small>Signature</small></div>
-        <div class="turn">Launch: live in 1 week &middot; Signature: live in 2</div>
-        <ul>
-          <li><b>Launch:</b> a one-page site, mobile-perfect, with up to <b>10 style directions</b> to choose from</li>
-          <li><b>Signature:</b> multi-section site with shop and newsletter integration, custom share cards for every page</li>
-          <li>One revision round (Launch) or two (Signature)</li>
-          <li>Your domain, your hosting, your accounts. <b>You own it all</b></li>
-        </ul>
+        <div class="turn">Three steps, and how fast each goes live. Start anywhere.</div>
+        <div class="tiers">
+          <div class="tier">
+            <div class="tier-top">
+              <span class="tier-price">$500</span>
+              <span class="tier-name">Launch</span>
+              <span class="tier-turn">1 week</span>
+            </div>
+            <p>A one-page site, mobile-perfect, with up to <b>10 style directions</b> to choose from. One revision round.</p>
+          </div>
+          <div class="tier">
+            <div class="tier-top">
+              <span class="tier-price">$1,500</span>
+              <span class="tier-name">Signature</span>
+              <span class="tier-turn">2 weeks</span>
+            </div>
+            <p>Multi-section site with shop and newsletter integration, plus custom share cards for every page. Two revision rounds.</p>
+          </div>
+          <div class="tier">
+            <div class="tier-top">
+              <span class="tier-price">$3,500</span>
+              <span class="tier-name">Storefront</span>
+              <span class="tier-turn">2 to 3 weeks</span>
+            </div>
+            <p>Everything in Signature, plus your site <b>actually takes money</b>. Stripe wired to your account for one-off sales, subscriptions, or both, and paid access delivered automatically: a members area, a private link, a phone number, a download. Booking connected to your calendar where it fits.</p>
+          </div>
+        </div>
+        <p style="font-size:13.5px;color:var(--soft);margin:-6px 0 18px">Every tier: your domain, your hosting, your Stripe, your customer list. <b style="color:var(--ink)">You own it all.</b></p>
         <a class="btn" href="mailto:vbouchouev@gmail.com?subject=Website%20build%20inquiry">Build my site</a>
-        <div class="addon"><b>Keep It Fresh, $50/mo:</b> ongoing edits on request. Send a text, wake up to the change.</div>
+        <div class="addon"><b>Keep It Fresh, $50/mo:</b> text me an edit, wake up to the change. Covers copy, photos, links and prices. New sections or features get quoted separately.</div>
       </article>
 
       <article class="offer">
@@ -234,6 +274,8 @@
         <a class="btn" href="mailto:vbouchouev@gmail.com?subject=Course%20build%20inquiry">Build my course</a>
       </article>
     </div>
+
+    <p class="aside">Something else in mind? If it's close to one of these, we'll scope it on a call. If it isn't, <b>I'll tell you honestly and point you to someone better.</b></p>
   </section>
 
   <section>
