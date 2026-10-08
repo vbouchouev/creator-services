@@ -84,9 +84,14 @@
     .offers{grid-template-columns:1fr 1fr}
     .offers .offer.feature,.offers .also{grid-column:1/-1}
     .offer.feature{display:grid;grid-template-columns:1.15fr 1fr;column-gap:44px}
-    .feat-r{display:flex;flex-direction:column;justify-content:flex-end}
+    .feat-r{justify-content:flex-end}
+    .offer .feat-r .btn{margin-top:0}
   }
   .feat-l,.feat-r{display:flex;flex-direction:column;min-width:0}
+  .feat-l .tiers{flex:0;margin:4px 0 0}
+  .feat-l .tier{padding:10px 0 0}
+  .feat-r > p{margin-top:16px !important}
+  @media (min-width:760px){.feat-r > p{margin-top:0 !important}}
   .also{font-family:"Spline Sans Mono",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);margin-top:18px}
   .offer{
     background:var(--panel);border:1px solid var(--line);border-radius:20px;
