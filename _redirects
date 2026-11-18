@@ -1,6 +1,7 @@
 # Stack (creator deals tool): page and API are hosted on pluscare.so, served here.
 /stack       https://pluscare.so/stack       200
 /stack-api   https://pluscare.so/stack-api   200
+/stack/*     https://pluscare.so/stack/:splat   200
 /alternative /alternative.html 200
 /medbury /medbury.html 200
 /pricing-original /pricing-original.html 200
